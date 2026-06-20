@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="900" viewBox="0 0 1600 900">
+  <rect width="1600" height="900" fill="#f6f7f9"/>
+  <rect x="120" y="110" width="1360" height="680" rx="28" fill="#ffffff" stroke="#d0d7de" stroke-width="4"/>
+  <circle cx="330" cy="450" r="88" fill="#2f81f7"/>
+  <circle cx="800" cy="450" r="88" fill="#34a853"/>
+  <circle cx="1270" cy="450" r="88" fill="#fbbc04"/>
+  <path d="M430 450 H700" stroke="#57606a" stroke-width="20" stroke-linecap="round"/>
+  <path d="M900 450 H1170" stroke="#57606a" stroke-width="20" stroke-linecap="round"/>
+  <text x="800" y="210" text-anchor="middle" font-family="Arial, sans-serif" font-size="56" font-weight="700" fill="#24292f">WeChat visual placeholder</text>
+  <text x="800" y="700" text-anchor="middle" font-family="Arial, sans-serif" font-size="30" fill="#57606a">Replace with Image Gen output</text>
+  <metadata>为微信公众号文章《Vibe 方法论：如何利用 AI 快速高效解决真实问题》生成一张 16:9 信息图。主题：这不是一条“十分钟用 AI 做网页”的爽片，而是一场真实项目复盘式技术分享。主题是：如何把 AI 组织成一个能调研、设计、执行、反驳、验收的高吞吐问题解决系统。画面表达 AI 辅助的问题拆解、上下文流转、验证闭环；现代、清晰、克制；不要伪文字、水印和品牌标识。</metadata>
+</svg>

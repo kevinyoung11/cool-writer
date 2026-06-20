@@ -1,0 +1,20 @@
+{
+  "name": "textlint-zhihu",
+  "project_path": "/Users/apulu/Documents/yy-article/docs/projects/textlint",
+  "command": [
+    "node",
+    "/Users/apulu/Documents/yy-article/docs/projects/textlint/packages/textlint/bin/textlint.js",
+    "--format",
+    "json",
+    "/Users/apulu/Documents/yy-article/skills-execute/article-publisher-open-source-deep-rewrite/vibe-ai-problem-solving-video-script/zhihu.md"
+  ],
+  "status": "failed",
+  "used_real_project": true,
+  "output_files": [
+    "/Users/apulu/Documents/yy-article/skills-execute/article-publisher-open-source-deep-rewrite/vibe-ai-problem-solving-video-script/tool-results/textlint-zhihu.json"
+  ],
+  "stdout_tail": "",
+  "stderr_tail": "node:internal/modules/cjs/loader:1458\n  throw err;\n  ^\n\nError: Cannot find module '../lib/src/cli'\nRequire stack:\n- /Users/apulu/Documents/yy-article/docs/projects/textlint/packages/textlint/bin/textlint.js\n    at Module._resolveFilename (node:internal/modules/cjs/loader:1455:15)\n    at defaultResolveImpl (node:internal/modules/cjs/loader:1065:19)\n    at resolveForCJSWithHooks (node:internal/modules/cjs/loader:1070:22)\n    at Module._load (node:internal/modules/cjs/loader:1241:25)\n    at wrapModuleLoad (node:internal/modules/cjs/loader:255:19)\n    at Module.require (node:internal/modules/cjs/loader:1555:12)\n    at require (node:internal/modules/helpers:152:16)\n    at Object.<anonymous> (/Users/apulu/Documents/yy-article/docs/projects/textlint/packages/textlint/bin/textlint.js:11:13)\n    at Module._compile (node:internal/modules/cjs/loader:1811:14)\n    at Module._extensions..js (node:internal/modules/cjs/loader:1942:10) {\n  code: 'MODULE_NOT_FOUND',\n  requireStack: [\n    '/Users/apulu/Documents/yy-article/docs/projects/textlint/packages/textlint/bin/textlint.js'\n  ]\n}\n\nNode.js v25.6.1\n",
+  "fallback_used": false,
+  "detail": "exit_code=1"
+}

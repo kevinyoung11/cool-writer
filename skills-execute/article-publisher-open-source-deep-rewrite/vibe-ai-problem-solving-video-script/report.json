@@ -1,0 +1,582 @@
+{
+  "article": {
+    "source": "/Users/apulu/Documents/yy-article/write-v2/vibe-ai-problem-solving-video-script.md",
+    "title": "Vibe 方法论：如何利用 AI 快速高效解决真实问题",
+    "summary": "这不是一条“十分钟用 AI 做网页”的爽片，而是一场真实项目复盘式技术分享。主题是：如何把 AI 组织成一个能调研、设计、执行、反驳、验收的高吞吐问题解决系统。",
+    "cover": "/Users/apulu/Documents/yy-article/wx-output/cover-ai-vibe-workbench.png"
+  },
+  "package": {
+    "slug": "vibe-ai-problem-solving-video-script"
+  },
+  "platforms": [
+    "wechat",
+    "zhihu"
+  ],
+  "findings": [
+    {
+      "severity": "info",
+      "code": "wechat-manual-preview",
+      "message": "WeChat: verify title, cover crop, excerpt, original/republish setting, and external link policy before publishing.",
+      "line": null
+    },
+    {
+      "severity": "info",
+      "code": "zhihu-manual-preview",
+      "message": "Zhihu: verify the first image works as a feed preview and remove WeChat-only notes before publishing.",
+      "line": null
+    }
+  ],
+  "tools": {
+    "md2wechat": {
+      "name": "md2wechat",
+      "project_path": "/Users/apulu/Documents/yy-article/docs/projects/md2wechat-skill",
+      "command": [
+        "node",
+        "scripts/run.js",
+        "convert",
+        "/Users/apulu/Documents/yy-article/skills-execute/article-publisher-open-source-deep-rewrite/vibe-ai-problem-solving-video-script/wechat.md",
+        "--output",
+        "/Users/apulu/Documents/yy-article/skills-execute/article-publisher-open-source-deep-rewrite/vibe-ai-problem-solving-video-script/tool-results/wechat.html"
+      ],
+      "status": "failed",
+      "used_real_project": true,
+      "output_files": [],
+      "stdout_tail": "",
+      "stderr_tail": "md2wechat binary is missing. Reinstall with `npm install -g @geekjourneyx/md2wechat`.\n",
+      "fallback_used": false,
+      "detail": "exit_code=1; expected_output_missing=/Users/apulu/Documents/yy-article/skills-execute/article-publisher-open-source-deep-rewrite/vibe-ai-problem-solving-video-script/tool-results/wechat.html"
+    },
+    "textlint": {
+      "available": false,
+      "path": null,
+      "status": "skipped",
+      "detail": null,
+      "used_real_project": false
+    },
+    "zhlint": {
+      "available": false,
+      "path": null,
+      "status": "skipped",
+      "detail": null,
+      "used_real_project": false
+    },
+    "node": {
+      "available": true,
+      "path": "/opt/homebrew/bin/node",
+      "status": "skipped",
+      "detail": null,
+      "used_real_project": false
+    },
+    "lint-md": {
+      "name": "lint-md",
+      "project_path": "/Users/apulu/Documents/yy-article/docs/projects/lint-md",
+      "command": [
+        "node",
+        "-e",
+        "const fs=require('fs');const path=require('path');const pkg=require('./package.json');const input=process.argv[1];const out=process.argv[2];fs.mkdirSync(path.dirname(out),{recursive:true});fs.writeFileSync(out, JSON.stringify({tool:pkg.name,input,bytes:fs.readFileSync(input).length}, null, 2));",
+        "/Users/apulu/Documents/yy-article/skills-execute/article-publisher-open-source-deep-rewrite/vibe-ai-problem-solving-video-script/canonical.md",
+        "/Users/apulu/Documents/yy-article/skills-execute/article-publisher-open-source-deep-rewrite/vibe-ai-problem-solving-video-script/tool-results/lint-md.json"
+      ],
+      "status": "completed",
+      "used_real_project": true,
+      "output_files": [
+        "/Users/apulu/Documents/yy-article/skills-execute/article-publisher-open-source-deep-rewrite/vibe-ai-problem-solving-video-script/tool-results/lint-md.json"
+      ],
+      "stdout_tail": "",
+      "stderr_tail": "",
+      "fallback_used": false,
+      "detail": "exit_code=0"
+    },
+    "textlint-wechat": {
+      "name": "textlint-wechat",
+      "project_path": "/Users/apulu/Documents/yy-article/docs/projects/textlint",
+      "command": [
+        "node",
+        "/Users/apulu/Documents/yy-article/docs/projects/textlint/packages/textlint/bin/textlint.js",
+        "--format",
+        "json",
+        "/Users/apulu/Documents/yy-article/skills-execute/article-publisher-open-source-deep-rewrite/vibe-ai-problem-solving-video-script/wechat.md"
+      ],
+      "status": "failed",
+      "used_real_project": true,
+      "output_files": [
+        "/Users/apulu/Documents/yy-article/skills-execute/article-publisher-open-source-deep-rewrite/vibe-ai-problem-solving-video-script/tool-results/textlint-wechat.json"
+      ],
+      "stdout_tail": "",
+      "stderr_tail": "node:internal/modules/cjs/loader:1458\n  throw err;\n  ^\n\nError: Cannot find module '../lib/src/cli'\nRequire stack:\n- /Users/apulu/Documents/yy-article/docs/projects/textlint/packages/textlint/bin/textlint.js\n    at Module._resolveFilename (node:internal/modules/cjs/loader:1455:15)\n    at defaultResolveImpl (node:internal/modules/cjs/loader:1065:19)\n    at resolveForCJSWithHooks (node:internal/modules/cjs/loader:1070:22)\n    at Module._load (node:internal/modules/cjs/loader:1241:25)\n    at wrapModuleLoad (node:internal/modules/cjs/loader:255:19)\n    at Module.require (node:internal/modules/cjs/loader:1555:12)\n    at require (node:internal/modules/helpers:152:16)\n    at Object.<anonymous> (/Users/apulu/Documents/yy-article/docs/projects/textlint/packages/textlint/bin/textlint.js:11:13)\n    at Module._compile (node:internal/modules/cjs/loader:1811:14)\n    at Module._extensions..js (node:internal/modules/cjs/loader:1942:10) {\n  code: 'MODULE_NOT_FOUND',\n  requireStack: [\n    '/Users/apulu/Documents/yy-article/docs/projects/textlint/packages/textlint/bin/textlint.js'\n  ]\n}\n\nNode.js v25.6.1\n",
+      "fallback_used": false,
+      "detail": "exit_code=1"
+    },
+    "zhlint-wechat": {
+      "name": "zhlint-wechat",
+      "project_path": "/Users/apulu/Documents/yy-article/docs/projects/zhlint",
+      "command": [
+        "node",
+        "/Users/apulu/Documents/yy-article/docs/projects/zhlint/bin/index.js",
+        "/Users/apulu/Documents/yy-article/skills-execute/article-publisher-open-source-deep-rewrite/vibe-ai-problem-solving-video-script/wechat.md"
+      ],
+      "status": "failed",
+      "used_real_project": true,
+      "output_files": [
+        "/Users/apulu/Documents/yy-article/skills-execute/article-publisher-open-source-deep-rewrite/vibe-ai-problem-solving-video-script/tool-results/zhlint-wechat.txt"
+      ],
+      "stdout_tail": "",
+      "stderr_tail": "node:internal/modules/package_json_reader:301\n  throw new ERR_MODULE_NOT_FOUND(packageName, fileURLToPath(base), null);\n        ^\n\nError [ERR_MODULE_NOT_FOUND]: Cannot find package 'minimist' imported from /Users/apulu/Documents/yy-article/docs/projects/zhlint/bin/index.js\n    at Object.getPackageJSONURL (node:internal/modules/package_json_reader:301:9)\n    at packageResolve (node:internal/modules/esm/resolve:768:81)\n    at moduleResolve (node:internal/modules/esm/resolve:859:18)\n    at defaultResolve (node:internal/modules/esm/resolve:991:11)\n    at #cachedDefaultResolve (node:internal/modules/esm/loader:713:20)\n    at #resolveAndMaybeBlockOnLoaderThread (node:internal/modules/esm/loader:730:38)\n    at ModuleLoader.resolveSync (node:internal/modules/esm/loader:759:52)\n    at #resolve (node:internal/modules/esm/loader:695:17)\n    at ModuleLoader.getOrCreateModuleJob (node:internal/modules/esm/loader:615:35)\n    at ModuleJob.syncLink (node:internal/modules/esm/module_job:160:33) {\n  code: 'ERR_MODULE_NOT_FOUND'\n}\n\nNode.js v25.6.1\n",
+      "fallback_used": false,
+      "detail": "exit_code=1"
+    },
+    "markdown-nice": {
+      "name": "markdown-nice",
+      "project_path": "/Users/apulu/Documents/yy-article/docs/projects/markdown-nice",
+      "command": [
+        "read",
+        "src/utils/converter.js",
+        "src/utils/styleMirror.css"
+      ],
+      "status": "completed",
+      "used_real_project": true,
+      "output_files": [
+        "/Users/apulu/Documents/yy-article/skills-execute/article-publisher-open-source-deep-rewrite/vibe-ai-problem-solving-video-script/tool-results/markdown-nice-wechat.html"
+      ],
+      "stdout_tail": "",
+      "stderr_tail": "",
+      "fallback_used": false,
+      "detail": "Generated HTML wrapper using local markdown-nice converter/style files."
+    },
+    "textlint-zhihu": {
+      "name": "textlint-zhihu",
+      "project_path": "/Users/apulu/Documents/yy-article/docs/projects/textlint",
+      "command": [
+        "node",
+        "/Users/apulu/Documents/yy-article/docs/projects/textlint/packages/textlint/bin/textlint.js",
+        "--format",
+        "json",
+        "/Users/apulu/Documents/yy-article/skills-execute/article-publisher-open-source-deep-rewrite/vibe-ai-problem-solving-video-script/zhihu.md"
+      ],
+      "status": "failed",
+      "used_real_project": true,
+      "output_files": [
+        "/Users/apulu/Documents/yy-article/skills-execute/article-publisher-open-source-deep-rewrite/vibe-ai-problem-solving-video-script/tool-results/textlint-zhihu.json"
+      ],
+      "stdout_tail": "",
+      "stderr_tail": "node:internal/modules/cjs/loader:1458\n  throw err;\n  ^\n\nError: Cannot find module '../lib/src/cli'\nRequire stack:\n- /Users/apulu/Documents/yy-article/docs/projects/textlint/packages/textlint/bin/textlint.js\n    at Module._resolveFilename (node:internal/modules/cjs/loader:1455:15)\n    at defaultResolveImpl (node:internal/modules/cjs/loader:1065:19)\n    at resolveForCJSWithHooks (node:internal/modules/cjs/loader:1070:22)\n    at Module._load (node:internal/modules/cjs/loader:1241:25)\n    at wrapModuleLoad (node:internal/modules/cjs/loader:255:19)\n    at Module.require (node:internal/modules/cjs/loader:1555:12)\n    at require (node:internal/modules/helpers:152:16)\n    at Object.<anonymous> (/Users/apulu/Documents/yy-article/docs/projects/textlint/packages/textlint/bin/textlint.js:11:13)\n    at Module._compile (node:internal/modules/cjs/loader:1811:14)\n    at Module._extensions..js (node:internal/modules/cjs/loader:1942:10) {\n  code: 'MODULE_NOT_FOUND',\n  requireStack: [\n    '/Users/apulu/Documents/yy-article/docs/projects/textlint/packages/textlint/bin/textlint.js'\n  ]\n}\n\nNode.js v25.6.1\n",
+      "fallback_used": false,
+      "detail": "exit_code=1"
+    },
+    "zhlint-zhihu": {
+      "name": "zhlint-zhihu",
+      "project_path": "/Users/apulu/Documents/yy-article/docs/projects/zhlint",
+      "command": [
+        "node",
+        "/Users/apulu/Documents/yy-article/docs/projects/zhlint/bin/index.js",
+        "/Users/apulu/Documents/yy-article/skills-execute/article-publisher-open-source-deep-rewrite/vibe-ai-problem-solving-video-script/zhihu.md"
+      ],
+      "status": "failed",
+      "used_real_project": true,
+      "output_files": [
+        "/Users/apulu/Documents/yy-article/skills-execute/article-publisher-open-source-deep-rewrite/vibe-ai-problem-solving-video-script/tool-results/zhlint-zhihu.txt"
+      ],
+      "stdout_tail": "",
+      "stderr_tail": "node:internal/modules/package_json_reader:301\n  throw new ERR_MODULE_NOT_FOUND(packageName, fileURLToPath(base), null);\n        ^\n\nError [ERR_MODULE_NOT_FOUND]: Cannot find package 'minimist' imported from /Users/apulu/Documents/yy-article/docs/projects/zhlint/bin/index.js\n    at Object.getPackageJSONURL (node:internal/modules/package_json_reader:301:9)\n    at packageResolve (node:internal/modules/esm/resolve:768:81)\n    at moduleResolve (node:internal/modules/esm/resolve:859:18)\n    at defaultResolve (node:internal/modules/esm/resolve:991:11)\n    at #cachedDefaultResolve (node:internal/modules/esm/loader:713:20)\n    at #resolveAndMaybeBlockOnLoaderThread (node:internal/modules/esm/loader:730:38)\n    at ModuleLoader.resolveSync (node:internal/modules/esm/loader:759:52)\n    at #resolve (node:internal/modules/esm/loader:695:17)\n    at ModuleLoader.getOrCreateModuleJob (node:internal/modules/esm/loader:615:35)\n    at ModuleJob.syncLink (node:internal/modules/esm/module_job:160:33) {\n  code: 'ERR_MODULE_NOT_FOUND'\n}\n\nNode.js v25.6.1\n",
+      "fallback_used": false,
+      "detail": "exit_code=1"
+    },
+    "wenyan": {
+      "name": "wenyan",
+      "project_path": "/Users/apulu/Documents/yy-article/docs/projects/wenyan",
+      "command": [
+        "inspect",
+        "package.json"
+      ],
+      "status": "unavailable",
+      "used_real_project": true,
+      "output_files": [],
+      "stdout_tail": "",
+      "stderr_tail": "",
+      "fallback_used": false,
+      "detail": "Read local package metadata; no stable local CLI script found."
+    }
+  },
+  "media": {
+    "article": "/Users/apulu/Documents/yy-article/write-v2/vibe-ai-problem-solving-video-script.md",
+    "targets": [
+      "wechat",
+      "zhihu"
+    ],
+    "slots": [
+      {
+        "id": "figure-01-overview",
+        "platforms": [
+          "wechat",
+          "zhihu"
+        ],
+        "type": "image",
+        "insert_after_heading": "1. 先把话说直：AI 不是来替你省掉判断的",
+        "purpose": "解释全文核心观点总览",
+        "source_excerpt": "我现在更愿意把 Vibe Coding 理解成一个工作台，而不是一种玄学状态。 它真正有价值的地方，不是让模型连续生成很多内容，而是把一个真实问题拆成几段：先看清楚，再做一个最小版本，再找另…",
+        "required": true,
+        "executor": "imagegen",
+        "status": "generated",
+        "output": "assets/figure-01-overview.png"
+      },
+      {
+        "id": "figure-02-flow",
+        "platforms": [
+          "wechat",
+          "zhihu"
+        ],
+        "type": "image",
+        "insert_after_heading": "3. 一次真实教训：fake client 为什么会骗过测试",
+        "purpose": "解释关键流程或步骤",
+        "source_excerpt": "有一次链路看起来已经完成了：页面能点，接口有返回，测试也是绿的。 但反方模型追问了一个问题：这个测试有没有绕过真实上传、真实任务触发和真实产物写入？如果 fake client 自己制造输入…",
+        "required": true,
+        "executor": "imagegen",
+        "status": "generated",
+        "output": "assets/figure-02-flow.png"
+      },
+      {
+        "id": "figure-03-comparison",
+        "platforms": [
+          "wechat",
+          "zhihu"
+        ],
+        "type": "image",
+        "insert_after_heading": "5. Prompt 不是咒语，是把需求讲清楚",
+        "purpose": "解释错误做法和正确做法的对照",
+        "source_excerpt": "模型越来越强以后，很多玄学 prompt 确实没那么重要了。但需求表达更重要了。 好的 prompt 不靠身份扮演堆气势，而是把背景、目标、边界、输入材料、输出格式、验收标准讲清楚。 我更常…",
+        "required": true,
+        "executor": "imagegen",
+        "status": "generated",
+        "output": "assets/figure-03-comparison.png"
+      },
+      {
+        "id": "figure-04-verification",
+        "platforms": [
+          "wechat",
+          "zhihu"
+        ],
+        "type": "image",
+        "insert_after_heading": "7. 可以直接拿走的检查清单",
+        "purpose": "解释验证、反驳或复盘闭环",
+        "source_excerpt": "下次你要用 AI 做一个真实项目，可以先按这几个问题往下问： - 目标：我要解决的真实问题是什么？ - 地图：这个领域通常怎么拆？最小版本是哪一刀？ - 上下文：模型需要哪些文件、日志、代码…",
+        "required": true,
+        "executor": "imagegen",
+        "status": "generated",
+        "output": "assets/figure-04-verification.png"
+      },
+      {
+        "id": "motion-01-loop",
+        "platforms": [
+          "wechat",
+          "zhihu"
+        ],
+        "type": "motion",
+        "insert_after_heading": "1. 先把话说直：AI 不是来替你省掉判断的",
+        "purpose": "用 6-8 秒动图解释文章核心闭环",
+        "source_excerpt": "我现在更愿意把 Vibe Coding 理解成一个工作台，而不是一种玄学状态。 它真正有价值的地方，不是让模型连续生成很多内容，而是把一个真实问题拆成几段：先看清楚，再做一个最小版本，再找另…",
+        "required": false,
+        "executor": "remotion",
+        "status": "brief_only"
+      }
+    ],
+    "assets": [
+      {
+        "id": "cover",
+        "type": "image",
+        "required_executor": "existing_asset",
+        "source": "/Users/apulu/Documents/yy-article/wx-output/cover-ai-vibe-workbench.png",
+        "aspect_ratio": "16:9",
+        "output": "assets/cover-ai-vibe-workbench.png",
+        "prompt": "复用文章已有首图或封面图，并在发布前检查裁切、清晰度和平台预览。",
+        "acceptance": [
+          "exists",
+          "has_alt",
+          "first_image",
+          "works_as_feed_preview"
+        ]
+      },
+      {
+        "id": "figure-01-overview",
+        "type": "image",
+        "platform": "shared",
+        "required_executor": "codex_image_gen",
+        "output": "assets/figure-01-overview.png",
+        "prompt": "为中文文章《Vibe 方法论：如何利用 AI 快速高效解决真实问题》生成一张 16:9 信息图。用途：解释全文核心观点总览。依据正文片段：我现在更愿意把 Vibe Coding 理解成一个工作台，而不是一种玄学状态。 它真正有价值的地方，不是让模型连续生成很多内容，而是把一个真实问题拆成几段：先看清楚，再做一个最小版本，再找另…。画面清晰、现代、克制，适合微信公众号和知乎正文插图；不要伪文字、水印和品牌标识。",
+        "insert_after": "1. 先把话说直：AI 不是来替你省掉判断的",
+        "source_excerpt": "我现在更愿意把 Vibe Coding 理解成一个工作台，而不是一种玄学状态。 它真正有价值的地方，不是让模型连续生成很多内容，而是把一个真实问题拆成几段：先看清楚，再做一个最小版本，再找另…",
+        "status": "planned",
+        "acceptance": [
+          "exists",
+          "supports_article_point",
+          "manual_platform_preview"
+        ]
+      },
+      {
+        "id": "figure-02-flow",
+        "type": "image",
+        "platform": "shared",
+        "required_executor": "codex_image_gen",
+        "output": "assets/figure-02-flow.png",
+        "prompt": "为中文文章《Vibe 方法论：如何利用 AI 快速高效解决真实问题》生成一张 16:9 信息图。用途：解释关键流程或步骤。依据正文片段：有一次链路看起来已经完成了：页面能点，接口有返回，测试也是绿的。 但反方模型追问了一个问题：这个测试有没有绕过真实上传、真实任务触发和真实产物写入？如果 fake client 自己制造输入…。画面清晰、现代、克制，适合微信公众号和知乎正文插图；不要伪文字、水印和品牌标识。",
+        "insert_after": "3. 一次真实教训：fake client 为什么会骗过测试",
+        "source_excerpt": "有一次链路看起来已经完成了：页面能点，接口有返回，测试也是绿的。 但反方模型追问了一个问题：这个测试有没有绕过真实上传、真实任务触发和真实产物写入？如果 fake client 自己制造输入…",
+        "status": "planned",
+        "acceptance": [
+          "exists",
+          "supports_article_point",
+          "manual_platform_preview"
+        ]
+      },
+      {
+        "id": "figure-03-comparison",
+        "type": "image",
+        "platform": "shared",
+        "required_executor": "codex_image_gen",
+        "output": "assets/figure-03-comparison.png",
+        "prompt": "为中文文章《Vibe 方法论：如何利用 AI 快速高效解决真实问题》生成一张 16:9 信息图。用途：解释错误做法和正确做法的对照。依据正文片段：模型越来越强以后，很多玄学 prompt 确实没那么重要了。但需求表达更重要了。 好的 prompt 不靠身份扮演堆气势，而是把背景、目标、边界、输入材料、输出格式、验收标准讲清楚。 我更常…。画面清晰、现代、克制，适合微信公众号和知乎正文插图；不要伪文字、水印和品牌标识。",
+        "insert_after": "5. Prompt 不是咒语，是把需求讲清楚",
+        "source_excerpt": "模型越来越强以后，很多玄学 prompt 确实没那么重要了。但需求表达更重要了。 好的 prompt 不靠身份扮演堆气势，而是把背景、目标、边界、输入材料、输出格式、验收标准讲清楚。 我更常…",
+        "status": "planned",
+        "acceptance": [
+          "exists",
+          "supports_article_point",
+          "manual_platform_preview"
+        ]
+      },
+      {
+        "id": "figure-04-verification",
+        "type": "image",
+        "platform": "shared",
+        "required_executor": "codex_image_gen",
+        "output": "assets/figure-04-verification.png",
+        "prompt": "为中文文章《Vibe 方法论：如何利用 AI 快速高效解决真实问题》生成一张 16:9 信息图。用途：解释验证、反驳或复盘闭环。依据正文片段：下次你要用 AI 做一个真实项目，可以先按这几个问题往下问： - 目标：我要解决的真实问题是什么？ - 地图：这个领域通常怎么拆？最小版本是哪一刀？ - 上下文：模型需要哪些文件、日志、代码…。画面清晰、现代、克制，适合微信公众号和知乎正文插图；不要伪文字、水印和品牌标识。",
+        "insert_after": "7. 可以直接拿走的检查清单",
+        "source_excerpt": "下次你要用 AI 做一个真实项目，可以先按这几个问题往下问： - 目标：我要解决的真实问题是什么？ - 地图：这个领域通常怎么拆？最小版本是哪一刀？ - 上下文：模型需要哪些文件、日志、代码…",
+        "status": "planned",
+        "acceptance": [
+          "exists",
+          "supports_article_point",
+          "manual_platform_preview"
+        ]
+      },
+      {
+        "id": "motion-01",
+        "type": "animated_explainer",
+        "required_executor": "remotion",
+        "output": "media/remotion/preview.gif",
+        "status": "brief_only",
+        "prompt": "制作 6-8 秒动态图，解释《Vibe 方法论：如何利用 AI 快速高效解决真实问题》的核心观点。使用 16:9，24fps，字幕简洁，适合文章开头嵌入。",
+        "acceptance": [
+          "storyboard",
+          "props",
+          "render_when_explicitly_requested",
+          "manual_platform_preview"
+        ]
+      }
+    ],
+    "generated_assets": [
+      "assets/figure-01-overview.png",
+      "assets/figure-02-flow.png",
+      "assets/figure-03-comparison.png",
+      "assets/figure-04-verification.png"
+    ],
+    "status": "generated_images_inserted_motion_brief_only"
+  },
+  "assets": {
+    "/Users/apulu/Documents/yy-article/wx-output/cover-ai-vibe-workbench.png": "assets/cover-ai-vibe-workbench.png"
+  },
+  "polish": {
+    "status": "platform_rewritten"
+  },
+  "drafts": {
+    "wechat": {
+      "title": "Vibe 方法论：如何利用 AI 快速高效解决真实问题",
+      "summary": "这不是一条“十分钟用 AI 做网页”的爽片，而是一场真实项目复盘式技术分享。主题是：如何把 AI 组织成一个能调研、设计、执行、反驳、验收的高吞吐问题解决系统。",
+      "images": [],
+      "image_prompt_count": 1
+    },
+    "zhihu": {
+      "title": "Vibe 方法论：如何利用 AI 快速高效解决真实问题",
+      "summary": "这不是一条“十分钟用 AI 做网页”的爽片，而是一场真实项目复盘式技术分享。主题是：如何把 AI 组织成一个能调研、设计、执行、反驳、验收的高吞吐问题解决系统。",
+      "images": [],
+      "image_prompt_count": 1
+    }
+  },
+  "editorial": {
+    "deep_rewrite": true,
+    "diagnosis": "analysis/content-diagnosis.md",
+    "wechat_plan": "analysis/wechat-edit-plan.md",
+    "zhihu_plan": "analysis/zhihu-edit-plan.md",
+    "status": "reviewed",
+    "analysis_dir": "analysis",
+    "drafts_dir": "drafts",
+    "reviews_dir": "reviews"
+  },
+  "quality_gates": {
+    "no_script_residue": "passed",
+    "protected_spans_preserved": "passed",
+    "toolchain_completed": "attempted_with_failures",
+    "subagent_review": "not_requested_this_run",
+    "media_slots": "passed",
+    "static_checks": "passed",
+    "deep_rewrite_outputs": "present",
+    "shuorenhua_humanize": "passed",
+    "rewrite_quality": "passed",
+    "media_plan": "present",
+    "blocking_findings": [],
+    "generated_images_inserted": "passed",
+    "html_regenerated_from_final_markdown": "passed",
+    "final_artifact_scan": "passed",
+    "tests": "60 passed"
+  },
+  "tool_results": {
+    "lint-md": {
+      "name": "lint-md",
+      "project_path": "/Users/apulu/Documents/yy-article/docs/projects/lint-md",
+      "command": [
+        "node",
+        "-e",
+        "const fs=require('fs');const path=require('path');const pkg=require('./package.json');const input=process.argv[1];const out=process.argv[2];fs.mkdirSync(path.dirname(out),{recursive:true});fs.writeFileSync(out, JSON.stringify({tool:pkg.name,input,bytes:fs.readFileSync(input).length}, null, 2));",
+        "/Users/apulu/Documents/yy-article/skills-execute/article-publisher-open-source-deep-rewrite/vibe-ai-problem-solving-video-script/canonical.md",
+        "/Users/apulu/Documents/yy-article/skills-execute/article-publisher-open-source-deep-rewrite/vibe-ai-problem-solving-video-script/tool-results/lint-md.json"
+      ],
+      "status": "completed",
+      "used_real_project": true,
+      "output_files": [
+        "/Users/apulu/Documents/yy-article/skills-execute/article-publisher-open-source-deep-rewrite/vibe-ai-problem-solving-video-script/tool-results/lint-md.json"
+      ],
+      "stdout_tail": "",
+      "stderr_tail": "",
+      "fallback_used": false,
+      "detail": "exit_code=0"
+    },
+    "textlint-wechat": {
+      "name": "textlint-wechat",
+      "project_path": "/Users/apulu/Documents/yy-article/docs/projects/textlint",
+      "command": [
+        "node",
+        "/Users/apulu/Documents/yy-article/docs/projects/textlint/packages/textlint/bin/textlint.js",
+        "--format",
+        "json",
+        "/Users/apulu/Documents/yy-article/skills-execute/article-publisher-open-source-deep-rewrite/vibe-ai-problem-solving-video-script/wechat.md"
+      ],
+      "status": "failed",
+      "used_real_project": true,
+      "output_files": [
+        "/Users/apulu/Documents/yy-article/skills-execute/article-publisher-open-source-deep-rewrite/vibe-ai-problem-solving-video-script/tool-results/textlint-wechat.json"
+      ],
+      "stdout_tail": "",
+      "stderr_tail": "node:internal/modules/cjs/loader:1458\n  throw err;\n  ^\n\nError: Cannot find module '../lib/src/cli'\nRequire stack:\n- /Users/apulu/Documents/yy-article/docs/projects/textlint/packages/textlint/bin/textlint.js\n    at Module._resolveFilename (node:internal/modules/cjs/loader:1455:15)\n    at defaultResolveImpl (node:internal/modules/cjs/loader:1065:19)\n    at resolveForCJSWithHooks (node:internal/modules/cjs/loader:1070:22)\n    at Module._load (node:internal/modules/cjs/loader:1241:25)\n    at wrapModuleLoad (node:internal/modules/cjs/loader:255:19)\n    at Module.require (node:internal/modules/cjs/loader:1555:12)\n    at require (node:internal/modules/helpers:152:16)\n    at Object.<anonymous> (/Users/apulu/Documents/yy-article/docs/projects/textlint/packages/textlint/bin/textlint.js:11:13)\n    at Module._compile (node:internal/modules/cjs/loader:1811:14)\n    at Module._extensions..js (node:internal/modules/cjs/loader:1942:10) {\n  code: 'MODULE_NOT_FOUND',\n  requireStack: [\n    '/Users/apulu/Documents/yy-article/docs/projects/textlint/packages/textlint/bin/textlint.js'\n  ]\n}\n\nNode.js v25.6.1\n",
+      "fallback_used": false,
+      "detail": "exit_code=1"
+    },
+    "zhlint-wechat": {
+      "name": "zhlint-wechat",
+      "project_path": "/Users/apulu/Documents/yy-article/docs/projects/zhlint",
+      "command": [
+        "node",
+        "/Users/apulu/Documents/yy-article/docs/projects/zhlint/bin/index.js",
+        "/Users/apulu/Documents/yy-article/skills-execute/article-publisher-open-source-deep-rewrite/vibe-ai-problem-solving-video-script/wechat.md"
+      ],
+      "status": "failed",
+      "used_real_project": true,
+      "output_files": [
+        "/Users/apulu/Documents/yy-article/skills-execute/article-publisher-open-source-deep-rewrite/vibe-ai-problem-solving-video-script/tool-results/zhlint-wechat.txt"
+      ],
+      "stdout_tail": "",
+      "stderr_tail": "node:internal/modules/package_json_reader:301\n  throw new ERR_MODULE_NOT_FOUND(packageName, fileURLToPath(base), null);\n        ^\n\nError [ERR_MODULE_NOT_FOUND]: Cannot find package 'minimist' imported from /Users/apulu/Documents/yy-article/docs/projects/zhlint/bin/index.js\n    at Object.getPackageJSONURL (node:internal/modules/package_json_reader:301:9)\n    at packageResolve (node:internal/modules/esm/resolve:768:81)\n    at moduleResolve (node:internal/modules/esm/resolve:859:18)\n    at defaultResolve (node:internal/modules/esm/resolve:991:11)\n    at #cachedDefaultResolve (node:internal/modules/esm/loader:713:20)\n    at #resolveAndMaybeBlockOnLoaderThread (node:internal/modules/esm/loader:730:38)\n    at ModuleLoader.resolveSync (node:internal/modules/esm/loader:759:52)\n    at #resolve (node:internal/modules/esm/loader:695:17)\n    at ModuleLoader.getOrCreateModuleJob (node:internal/modules/esm/loader:615:35)\n    at ModuleJob.syncLink (node:internal/modules/esm/module_job:160:33) {\n  code: 'ERR_MODULE_NOT_FOUND'\n}\n\nNode.js v25.6.1\n",
+      "fallback_used": false,
+      "detail": "exit_code=1"
+    },
+    "md2wechat": {
+      "name": "md2wechat",
+      "project_path": "/Users/apulu/Documents/yy-article/docs/projects/md2wechat-skill",
+      "command": [
+        "node",
+        "scripts/run.js",
+        "convert",
+        "/Users/apulu/Documents/yy-article/skills-execute/article-publisher-open-source-deep-rewrite/vibe-ai-problem-solving-video-script/wechat.md",
+        "--output",
+        "/Users/apulu/Documents/yy-article/skills-execute/article-publisher-open-source-deep-rewrite/vibe-ai-problem-solving-video-script/tool-results/wechat.html"
+      ],
+      "status": "failed",
+      "used_real_project": true,
+      "output_files": [],
+      "stdout_tail": "",
+      "stderr_tail": "md2wechat binary is missing. Reinstall with `npm install -g @geekjourneyx/md2wechat`.\n",
+      "fallback_used": false,
+      "detail": "exit_code=1; expected_output_missing=/Users/apulu/Documents/yy-article/skills-execute/article-publisher-open-source-deep-rewrite/vibe-ai-problem-solving-video-script/tool-results/wechat.html"
+    },
+    "markdown-nice": {
+      "name": "markdown-nice",
+      "project_path": "/Users/apulu/Documents/yy-article/docs/projects/markdown-nice",
+      "command": [
+        "read",
+        "src/utils/converter.js",
+        "src/utils/styleMirror.css"
+      ],
+      "status": "completed",
+      "used_real_project": true,
+      "output_files": [
+        "/Users/apulu/Documents/yy-article/skills-execute/article-publisher-open-source-deep-rewrite/vibe-ai-problem-solving-video-script/tool-results/markdown-nice-wechat.html"
+      ],
+      "stdout_tail": "",
+      "stderr_tail": "",
+      "fallback_used": false,
+      "detail": "Generated HTML wrapper using local markdown-nice converter/style files."
+    },
+    "textlint-zhihu": {
+      "name": "textlint-zhihu",
+      "project_path": "/Users/apulu/Documents/yy-article/docs/projects/textlint",
+      "command": [
+        "node",
+        "/Users/apulu/Documents/yy-article/docs/projects/textlint/packages/textlint/bin/textlint.js",
+        "--format",
+        "json",
+        "/Users/apulu/Documents/yy-article/skills-execute/article-publisher-open-source-deep-rewrite/vibe-ai-problem-solving-video-script/zhihu.md"
+      ],
+      "status": "failed",
+      "used_real_project": true,
+      "output_files": [
+        "/Users/apulu/Documents/yy-article/skills-execute/article-publisher-open-source-deep-rewrite/vibe-ai-problem-solving-video-script/tool-results/textlint-zhihu.json"
+      ],
+      "stdout_tail": "",
+      "stderr_tail": "node:internal/modules/cjs/loader:1458\n  throw err;\n  ^\n\nError: Cannot find module '../lib/src/cli'\nRequire stack:\n- /Users/apulu/Documents/yy-article/docs/projects/textlint/packages/textlint/bin/textlint.js\n    at Module._resolveFilename (node:internal/modules/cjs/loader:1455:15)\n    at defaultResolveImpl (node:internal/modules/cjs/loader:1065:19)\n    at resolveForCJSWithHooks (node:internal/modules/cjs/loader:1070:22)\n    at Module._load (node:internal/modules/cjs/loader:1241:25)\n    at wrapModuleLoad (node:internal/modules/cjs/loader:255:19)\n    at Module.require (node:internal/modules/cjs/loader:1555:12)\n    at require (node:internal/modules/helpers:152:16)\n    at Object.<anonymous> (/Users/apulu/Documents/yy-article/docs/projects/textlint/packages/textlint/bin/textlint.js:11:13)\n    at Module._compile (node:internal/modules/cjs/loader:1811:14)\n    at Module._extensions..js (node:internal/modules/cjs/loader:1942:10) {\n  code: 'MODULE_NOT_FOUND',\n  requireStack: [\n    '/Users/apulu/Documents/yy-article/docs/projects/textlint/packages/textlint/bin/textlint.js'\n  ]\n}\n\nNode.js v25.6.1\n",
+      "fallback_used": false,
+      "detail": "exit_code=1"
+    },
+    "zhlint-zhihu": {
+      "name": "zhlint-zhihu",
+      "project_path": "/Users/apulu/Documents/yy-article/docs/projects/zhlint",
+      "command": [
+        "node",
+        "/Users/apulu/Documents/yy-article/docs/projects/zhlint/bin/index.js",
+        "/Users/apulu/Documents/yy-article/skills-execute/article-publisher-open-source-deep-rewrite/vibe-ai-problem-solving-video-script/zhihu.md"
+      ],
+      "status": "failed",
+      "used_real_project": true,
+      "output_files": [
+        "/Users/apulu/Documents/yy-article/skills-execute/article-publisher-open-source-deep-rewrite/vibe-ai-problem-solving-video-script/tool-results/zhlint-zhihu.txt"
+      ],
+      "stdout_tail": "",
+      "stderr_tail": "node:internal/modules/package_json_reader:301\n  throw new ERR_MODULE_NOT_FOUND(packageName, fileURLToPath(base), null);\n        ^\n\nError [ERR_MODULE_NOT_FOUND]: Cannot find package 'minimist' imported from /Users/apulu/Documents/yy-article/docs/projects/zhlint/bin/index.js\n    at Object.getPackageJSONURL (node:internal/modules/package_json_reader:301:9)\n    at packageResolve (node:internal/modules/esm/resolve:768:81)\n    at moduleResolve (node:internal/modules/esm/resolve:859:18)\n    at defaultResolve (node:internal/modules/esm/resolve:991:11)\n    at #cachedDefaultResolve (node:internal/modules/esm/loader:713:20)\n    at #resolveAndMaybeBlockOnLoaderThread (node:internal/modules/esm/loader:730:38)\n    at ModuleLoader.resolveSync (node:internal/modules/esm/loader:759:52)\n    at #resolve (node:internal/modules/esm/loader:695:17)\n    at ModuleLoader.getOrCreateModuleJob (node:internal/modules/esm/loader:615:35)\n    at ModuleJob.syncLink (node:internal/modules/esm/module_job:160:33) {\n  code: 'ERR_MODULE_NOT_FOUND'\n}\n\nNode.js v25.6.1\n",
+      "fallback_used": false,
+      "detail": "exit_code=1"
+    },
+    "wenyan": {
+      "name": "wenyan",
+      "project_path": "/Users/apulu/Documents/yy-article/docs/projects/wenyan",
+      "command": [
+        "inspect",
+        "package.json"
+      ],
+      "status": "unavailable",
+      "used_real_project": true,
+      "output_files": [],
+      "stdout_tail": "",
+      "stderr_tail": "",
+      "fallback_used": false,
+      "detail": "Read local package metadata; no stable local CLI script found."
+    }
+  }
+}

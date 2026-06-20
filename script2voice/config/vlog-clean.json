@@ -1,0 +1,13 @@
+{
+  "cosyvoice_root": "/Users/apulu/Documents/yy-home/yy-ai-course/vendor/CosyVoice",
+  "cosyvoice_python": "/Users/apulu/Documents/yy-home/yy-ai-course/.venv-cosyvoice/bin/python",
+  "model_dir": "/Users/apulu/Documents/yy-home/yy-ai-course/vendor/CosyVoice/pretrained_models/Fun-CosyVoice3-0.5B",
+  "prompt_wav": "/Users/apulu/Documents/yy-article/script2voice/voices/vlog-test/prompt_vlog_clean.wav",
+  "prompt_text": "You are a helpful assistant.<|endofprompt|>为了完成第一支vlog，我有一个秘密计划。",
+  "cache_dir": "/Users/apulu/Documents/yy-article/script2voice/cache",
+  "sample_rate": 24000,
+  "speed": 1.0,
+  "max_chars": 95,
+  "min_chars": 18,
+  "pause_ms": 260
+}

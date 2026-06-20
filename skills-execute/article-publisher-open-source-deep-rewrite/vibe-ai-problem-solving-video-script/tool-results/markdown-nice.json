@@ -1,0 +1,18 @@
+{
+  "name": "markdown-nice",
+  "project_path": "/Users/apulu/Documents/yy-article/docs/projects/markdown-nice",
+  "command": [
+    "read",
+    "src/utils/converter.js",
+    "src/utils/styleMirror.css"
+  ],
+  "status": "completed",
+  "used_real_project": true,
+  "output_files": [
+    "/Users/apulu/Documents/yy-article/skills-execute/article-publisher-open-source-deep-rewrite/vibe-ai-problem-solving-video-script/tool-results/markdown-nice-wechat.html"
+  ],
+  "stdout_tail": "",
+  "stderr_tail": "",
+  "fallback_used": false,
+  "detail": "Generated HTML wrapper using local markdown-nice converter/style files."
+}

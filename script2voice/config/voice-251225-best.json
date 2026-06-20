@@ -1,0 +1,13 @@
+{
+  "cosyvoice_root": "/Users/apulu/Documents/yy-home/yy-ai-course/vendor/CosyVoice",
+  "cosyvoice_python": "/Users/apulu/Documents/yy-home/yy-ai-course/.venv-cosyvoice/bin/python",
+  "model_dir": "/Users/apulu/Documents/yy-home/yy-ai-course/vendor/CosyVoice/pretrained_models/Fun-CosyVoice3-0.5B",
+  "prompt_wav": "/Users/apulu/Documents/yy-article/script2voice/voices/251225_0026-1/candidates/cand_02_0158_0211.wav",
+  "prompt_text": "You are a helpful assistant.<|endofprompt|>如果这样的话也不能算是热爱吧，毕竟如果发自内心地喜欢，就可以想尽一切办法去达到。",
+  "cache_dir": "/Users/apulu/Documents/yy-article/script2voice/cache",
+  "sample_rate": 24000,
+  "speed": 1.0,
+  "max_chars": 95,
+  "min_chars": 18,
+  "pause_ms": 260
+}

@@ -1,0 +1,13 @@
+{
+  "cosyvoice_root": "/Users/apulu/Documents/yy-home/yy-ai-course/vendor/CosyVoice",
+  "cosyvoice_python": "/Users/apulu/Documents/yy-home/yy-ai-course/.venv-cosyvoice/bin/python",
+  "model_dir": "/Users/apulu/Documents/yy-home/yy-ai-course/vendor/CosyVoice/pretrained_models/Fun-CosyVoice3-0.5B",
+  "prompt_wav": "/Users/apulu/Documents/yy-article/script2voice/voices/yy-sound-train-demo/source/prompt_best_20s.wav",
+  "prompt_text": "You are a helpful assistant.<|endofprompt|>工作久了就会发现，人会变得迟钝。比如说，以前我会对音乐很敏感。每隔一段时间，总会出现一段旋律，能够直击我的内心，让我感动很多年。那这种感觉，已经很久没有出现过了。",
+  "cache_dir": "/Users/apulu/Documents/yy-article/script2voice/cache",
+  "sample_rate": 24000,
+  "speed": 1.0,
+  "max_chars": 95,
+  "min_chars": 18,
+  "pause_ms": 260
+}

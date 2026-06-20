@@ -1,0 +1,98 @@
+{
+  "article": {
+    "source": "/Users/apulu/Documents/yy-article/write-v2/vibe-ai-problem-solving-video-script.md",
+    "title": "Vibe 方法论：如何利用 AI 快速高效解决真实问题",
+    "summary": "这不是一条“十分钟用 AI 做网页”的爽片，而是一场真实项目复盘式技术分享。主题是：如何把 AI 组织成一个能调研、设计、执行、反驳、验收的高吞吐问题解决系统。",
+    "cover": "/Users/apulu/Documents/yy-article/wx-output/cover-ai-vibe-workbench.png"
+  },
+  "package": {
+    "slug": "vibe-ai-problem-solving-video-script"
+  },
+  "platforms": [
+    "wechat",
+    "zhihu"
+  ],
+  "findings": [
+    {
+      "severity": "info",
+      "code": "wechat-manual-preview",
+      "message": "WeChat: verify title, cover crop, excerpt, original/republish setting, and external link policy before publishing.",
+      "line": null
+    },
+    {
+      "severity": "info",
+      "code": "zhihu-manual-preview",
+      "message": "Zhihu: verify the first image works as a feed preview and remove WeChat-only notes before publishing.",
+      "line": null
+    }
+  ],
+  "tools": {
+    "md2wechat": {
+      "available": false,
+      "path": null,
+      "status": "skipped",
+      "detail": null
+    },
+    "textlint": {
+      "available": false,
+      "path": null,
+      "status": "skipped",
+      "detail": null
+    },
+    "zhlint": {
+      "available": false,
+      "path": null,
+      "status": "skipped",
+      "detail": null
+    },
+    "node": {
+      "available": true,
+      "path": "/opt/homebrew/bin/node",
+      "status": "skipped",
+      "detail": null
+    }
+  },
+  "media": {
+    "article": "/Users/apulu/Documents/yy-article/write-v2/vibe-ai-problem-solving-video-script.md",
+    "targets": [
+      "wechat",
+      "zhihu"
+    ],
+    "assets": [
+      {
+        "id": "cover",
+        "type": "image",
+        "required_executor": "existing_asset",
+        "source": "/Users/apulu/Documents/yy-article/wx-output/cover-ai-vibe-workbench.png",
+        "aspect_ratio": "16:9",
+        "output": "assets/cover-ai-vibe-workbench.png",
+        "prompt": "复用文章已有首图或封面图，并在发布前检查裁切、清晰度和平台预览。",
+        "acceptance": [
+          "exists",
+          "has_alt",
+          "first_image",
+          "works_as_feed_preview"
+        ]
+      },
+      {
+        "id": "motion-01",
+        "type": "animated_explainer",
+        "required_executor": "remotion",
+        "output": "media/remotion/preview.gif",
+        "prompt": "制作 6-8 秒动态图，解释《Vibe 方法论：如何利用 AI 快速高效解决真实问题》的核心观点。使用 16:9，24fps，字幕简洁，适合文章开头嵌入。",
+        "acceptance": [
+          "storyboard",
+          "props",
+          "rendered_preview",
+          "manual_platform_preview"
+        ]
+      }
+    ]
+  },
+  "assets": {
+    "/Users/apulu/Documents/yy-article/wx-output/cover-ai-vibe-workbench.png": "assets/cover-ai-vibe-workbench.png"
+  },
+  "polish": {
+    "status": "transformed"
+  }
+}

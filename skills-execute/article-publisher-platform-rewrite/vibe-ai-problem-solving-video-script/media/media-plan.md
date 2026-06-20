@@ -1,0 +1,37 @@
+# Media Plan
+
+Source: `/Users/apulu/Documents/yy-article/write-v2/vibe-ai-problem-solving-video-script.md`
+
+## Assets
+
+### cover
+
+- Type: `image`
+- Executor: `existing_asset`
+- Output: `assets/cover-ai-vibe-workbench.png`
+- Status: `planned`
+- Prompt: 复用文章已有首图或封面图，并在发布前检查裁切、清晰度和平台预览。
+
+### wechat-visual-01
+
+- Type: `image`
+- Executor: `codex_image_gen`
+- Output: `assets/ai-problem-solving-loop.png`
+- Status: `generated`
+- Prompt: 为微信公众号文章《Vibe 方法论：如何利用 AI 快速高效解决真实问题》生成一张 16:9 信息图。主题：这不是一条“十分钟用 AI 做网页”的爽片，而是一场真实项目复盘式技术分享。主题是：如何把 AI 组织成一个能调研、设计、执行、反驳、验收的高吞吐问题解决系统。画面表达 AI 辅助的问题拆解、上下文流转、验证闭环；现代、清晰、克制；不要伪文字、水印和品牌标识。
+
+### zhihu-visual-01
+
+- Type: `image`
+- Executor: `codex_image_gen`
+- Output: `assets/ai-problem-solving-loop.png`
+- Status: `generated`
+- Prompt: 为知乎文章《Vibe 方法论：如何利用 AI 快速高效解决真实问题》生成一张 16:9 信息图。主题：这不是一条“十分钟用 AI 做网页”的爽片，而是一场真实项目复盘式技术分享。主题是：如何把 AI 组织成一个能调研、设计、执行、反驳、验收的高吞吐问题解决系统。画面表达 AI 辅助的问题拆解、上下文流转、验证闭环；现代、清晰、克制；不要伪文字、水印和品牌标识。
+
+### motion-01
+
+- Type: `animated_explainer`
+- Executor: `remotion`
+- Output: `media/remotion/preview.gif when rendered explicitly`
+- Status: `brief_only`
+- Prompt: 制作 6-8 秒动态图，解释《Vibe 方法论：如何利用 AI 快速高效解决真实问题》的核心观点。使用 16:9，24fps，字幕简洁，适合文章开头嵌入。

@@ -1,0 +1,98 @@
+{
+    "article": {
+        "source": "/Users/apulu/Documents/yy-article/write-v2/vibe-ai-problem-solving-video-script.md",
+        "title": "Vibe \u65b9\u6cd5\u8bba\uff1a\u5982\u4f55\u5229\u7528 AI \u5feb\u901f\u9ad8\u6548\u89e3\u51b3\u771f\u5b9e\u95ee\u9898",
+        "summary": "\u8fd9\u4e0d\u662f\u4e00\u6761\u201c\u5341\u5206\u949f\u7528 AI \u505a\u7f51\u9875\u201d\u7684\u723d\u7247\uff0c\u800c\u662f\u4e00\u573a\u771f\u5b9e\u9879\u76ee\u590d\u76d8\u5f0f\u6280\u672f\u5206\u4eab\u3002\u4e3b\u9898\u662f\uff1a\u5982\u4f55\u628a AI \u7ec4\u7ec7\u6210\u4e00\u4e2a\u80fd\u8c03\u7814\u3001\u8bbe\u8ba1\u3001\u6267\u884c\u3001\u53cd\u9a73\u3001\u9a8c\u6536\u7684\u9ad8\u541e\u5410\u95ee\u9898\u89e3\u51b3\u7cfb\u7edf\u3002",
+        "cover": "/Users/apulu/Documents/yy-article/wx-output/cover-ai-vibe-workbench.png"
+    },
+    "package": {
+        "slug": "vibe-ai-problem-solving-video-script"
+    },
+    "platforms": [
+        "wechat",
+        "zhihu"
+    ],
+    "findings": [
+        {
+            "severity": "info",
+            "code": "wechat-manual-preview",
+            "message": "WeChat: verify title, cover crop, excerpt, original/republish setting, and external link policy before publishing.",
+            "line": null
+        },
+        {
+            "severity": "info",
+            "code": "zhihu-manual-preview",
+            "message": "Zhihu: verify the first image works as a feed preview and remove WeChat-only notes before publishing.",
+            "line": null
+        }
+    ],
+    "tools": {
+        "md2wechat": {
+            "available": false,
+            "path": null,
+            "status": "skipped",
+            "detail": null
+        },
+        "textlint": {
+            "available": false,
+            "path": null,
+            "status": "skipped",
+            "detail": null
+        },
+        "zhlint": {
+            "available": false,
+            "path": null,
+            "status": "skipped",
+            "detail": null
+        },
+        "node": {
+            "available": true,
+            "path": "/opt/homebrew/bin/node",
+            "status": "skipped",
+            "detail": null
+        }
+    },
+    "media": {
+        "article": "/Users/apulu/Documents/yy-article/write-v2/vibe-ai-problem-solving-video-script.md",
+        "targets": [
+            "wechat",
+            "zhihu"
+        ],
+        "assets": [
+            {
+                "id": "cover",
+                "type": "image",
+                "required_executor": "existing_asset",
+                "source": "/Users/apulu/Documents/yy-article/wx-output/cover-ai-vibe-workbench.png",
+                "aspect_ratio": "16:9",
+                "output": "assets/cover-ai-vibe-workbench.png",
+                "prompt": "\u590d\u7528\u6587\u7ae0\u5df2\u6709\u9996\u56fe\u6216\u5c01\u9762\u56fe\uff0c\u5e76\u5728\u53d1\u5e03\u524d\u68c0\u67e5\u88c1\u5207\u3001\u6e05\u6670\u5ea6\u548c\u5e73\u53f0\u9884\u89c8\u3002",
+                "acceptance": [
+                    "exists",
+                    "has_alt",
+                    "first_image",
+                    "works_as_feed_preview"
+                ]
+            },
+            {
+                "id": "motion-01",
+                "type": "animated_explainer",
+                "required_executor": "remotion",
+                "output": "media/remotion/preview.gif",
+                "prompt": "\u5236\u4f5c 6-8 \u79d2\u52a8\u6001\u56fe\uff0c\u89e3\u91ca\u300aVibe \u65b9\u6cd5\u8bba\uff1a\u5982\u4f55\u5229\u7528 AI \u5feb\u901f\u9ad8\u6548\u89e3\u51b3\u771f\u5b9e\u95ee\u9898\u300b\u7684\u6838\u5fc3\u89c2\u70b9\u3002\u4f7f\u7528 16:9\uff0c24fps\uff0c\u5b57\u5e55\u7b80\u6d01\uff0c\u9002\u5408\u6587\u7ae0\u5f00\u5934\u5d4c\u5165\u3002",
+                "acceptance": [
+                    "storyboard",
+                    "props",
+                    "rendered_preview",
+                    "manual_platform_preview"
+                ]
+            }
+        ]
+    },
+    "assets": {
+        "/Users/apulu/Documents/yy-article/wx-output/cover-ai-vibe-workbench.png": "assets/cover-ai-vibe-workbench.png"
+    },
+    "polish": {
+        "status": "transformed"
+    }
+}

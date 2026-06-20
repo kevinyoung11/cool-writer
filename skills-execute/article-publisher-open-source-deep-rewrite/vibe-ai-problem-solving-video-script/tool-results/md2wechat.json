@@ -1,0 +1,19 @@
+{
+  "name": "md2wechat",
+  "project_path": "/Users/apulu/Documents/yy-article/docs/projects/md2wechat-skill",
+  "command": [
+    "node",
+    "scripts/run.js",
+    "convert",
+    "/Users/apulu/Documents/yy-article/skills-execute/article-publisher-open-source-deep-rewrite/vibe-ai-problem-solving-video-script/wechat.md",
+    "--output",
+    "/Users/apulu/Documents/yy-article/skills-execute/article-publisher-open-source-deep-rewrite/vibe-ai-problem-solving-video-script/tool-results/wechat.html"
+  ],
+  "status": "failed",
+  "used_real_project": true,
+  "output_files": [],
+  "stdout_tail": "",
+  "stderr_tail": "md2wechat binary is missing. Reinstall with `npm install -g @geekjourneyx/md2wechat`.\n",
+  "fallback_used": false,
+  "detail": "exit_code=1; expected_output_missing=/Users/apulu/Documents/yy-article/skills-execute/article-publisher-open-source-deep-rewrite/vibe-ai-problem-solving-video-script/tool-results/wechat.html"
+}

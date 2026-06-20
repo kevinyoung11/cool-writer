@@ -1,0 +1,13 @@
+{
+  "cosyvoice_root": "/Users/apulu/Documents/yy-home/yy-ai-course/vendor/CosyVoice",
+  "cosyvoice_python": "/Users/apulu/Documents/yy-home/yy-ai-course/.venv-cosyvoice/bin/python",
+  "model_dir": "/Users/apulu/Documents/yy-home/yy-ai-course/vendor/CosyVoice/pretrained_models/Fun-CosyVoice3-0.5B",
+  "prompt_wav": "/Users/apulu/Documents/yy-home/yy-ai-course/assets/voices/cosyvoice-hard-zh/prompt_audio_4.wav",
+  "prompt_text": "You are a helpful assistant.<|endofprompt|>在中国鸦片泛滥的年代，不同材质的烟枪甚至成为了身份和地位的象征。",
+  "cache_dir": "/Users/apulu/Documents/yy-article/script2voice/cache",
+  "sample_rate": 24000,
+  "speed": 1.0,
+  "max_chars": 95,
+  "min_chars": 18,
+  "pause_ms": 260
+}

@@ -1,0 +1,64 @@
+.DS_Store
+Thumbs.db
+Desktop.ini
+
+# Editor and local tool state
+.idea/
+.vscode/
+*.swp
+*.swo
+
+# Local environment and secrets
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+*.token
+*.local
+
+# Dependencies and build output
+node_modules/
+dist/
+build/
+.next/
+.turbo/
+.cache/
+coverage/
+.nyc_output/
+
+# Python caches
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+
+# Tool and model caches
+script2voice/cache/
+*.pt
+*.fst
+
+# Logs and temporary files
+*.log
+logs/
+tmp/
+temp/
+*.tmp
+article-index-*.json
+
+# Generated audio artifacts and runtime outputs
+*.wav
+*.mp3
+script2voice/runs/
+script2voice/runs/**/audio/
+script2voice/voices/**/source/
+
+# Generated test runs
+skills-execute/test-runs/
+skills-execute/**/logs/
+
+# Embedded upstream project snapshots
+docs/projects/

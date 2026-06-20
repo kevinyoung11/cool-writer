@@ -1,0 +1,34 @@
+{
+    "status": "completed",
+    "reason": "External lint tools are optional; built-in publish checks always run.",
+    "builtin": {
+        "status": "completed",
+        "diagnostics": []
+    },
+    "tools": {
+        "md2wechat": {
+            "available": false,
+            "path": null,
+            "status": "skipped",
+            "detail": null
+        },
+        "textlint": {
+            "available": false,
+            "path": null,
+            "status": "skipped",
+            "detail": null
+        },
+        "zhlint": {
+            "available": false,
+            "path": null,
+            "status": "skipped",
+            "detail": null
+        },
+        "node": {
+            "available": true,
+            "path": "/opt/homebrew/bin/node",
+            "status": "skipped",
+            "detail": null
+        }
+    }
+}

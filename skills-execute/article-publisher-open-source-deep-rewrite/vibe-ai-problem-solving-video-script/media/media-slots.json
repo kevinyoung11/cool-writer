@@ -1,0 +1,78 @@
+{
+  "slots": [
+    {
+      "id": "figure-01-overview",
+      "platforms": [
+        "wechat",
+        "zhihu"
+      ],
+      "type": "image",
+      "insert_after_heading": "1. 先把话说直：AI 不是来替你省掉判断的",
+      "purpose": "解释全文核心观点总览",
+      "source_excerpt": "我现在更愿意把 Vibe Coding 理解成一个工作台，而不是一种玄学状态。 它真正有价值的地方，不是让模型连续生成很多内容，而是把一个真实问题拆成几段：先看清楚，再做一个最小版本，再找另…",
+      "required": true,
+      "executor": "imagegen",
+      "status": "generated",
+      "output": "assets/figure-01-overview.png"
+    },
+    {
+      "id": "figure-02-flow",
+      "platforms": [
+        "wechat",
+        "zhihu"
+      ],
+      "type": "image",
+      "insert_after_heading": "3. 一次真实教训：fake client 为什么会骗过测试",
+      "purpose": "解释关键流程或步骤",
+      "source_excerpt": "有一次链路看起来已经完成了：页面能点，接口有返回，测试也是绿的。 但反方模型追问了一个问题：这个测试有没有绕过真实上传、真实任务触发和真实产物写入？如果 fake client 自己制造输入…",
+      "required": true,
+      "executor": "imagegen",
+      "status": "generated",
+      "output": "assets/figure-02-flow.png"
+    },
+    {
+      "id": "figure-03-comparison",
+      "platforms": [
+        "wechat",
+        "zhihu"
+      ],
+      "type": "image",
+      "insert_after_heading": "5. Prompt 不是咒语，是把需求讲清楚",
+      "purpose": "解释错误做法和正确做法的对照",
+      "source_excerpt": "模型越来越强以后，很多玄学 prompt 确实没那么重要了。但需求表达更重要了。 好的 prompt 不靠身份扮演堆气势，而是把背景、目标、边界、输入材料、输出格式、验收标准讲清楚。 我更常…",
+      "required": true,
+      "executor": "imagegen",
+      "status": "generated",
+      "output": "assets/figure-03-comparison.png"
+    },
+    {
+      "id": "figure-04-verification",
+      "platforms": [
+        "wechat",
+        "zhihu"
+      ],
+      "type": "image",
+      "insert_after_heading": "7. 可以直接拿走的检查清单",
+      "purpose": "解释验证、反驳或复盘闭环",
+      "source_excerpt": "下次你要用 AI 做一个真实项目，可以先按这几个问题往下问： - 目标：我要解决的真实问题是什么？ - 地图：这个领域通常怎么拆？最小版本是哪一刀？ - 上下文：模型需要哪些文件、日志、代码…",
+      "required": true,
+      "executor": "imagegen",
+      "status": "generated",
+      "output": "assets/figure-04-verification.png"
+    },
+    {
+      "id": "motion-01-loop",
+      "platforms": [
+        "wechat",
+        "zhihu"
+      ],
+      "type": "motion",
+      "insert_after_heading": "1. 先把话说直：AI 不是来替你省掉判断的",
+      "purpose": "用 6-8 秒动图解释文章核心闭环",
+      "source_excerpt": "我现在更愿意把 Vibe Coding 理解成一个工作台，而不是一种玄学状态。 它真正有价值的地方，不是让模型连续生成很多内容，而是把一个真实问题拆成几段：先看清楚，再做一个最小版本，再找另…",
+      "required": false,
+      "executor": "remotion",
+      "status": "brief_only"
+    }
+  ]
+}

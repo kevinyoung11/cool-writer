@@ -1,0 +1,111 @@
+{
+  "source": "/Users/apulu/Documents/yy-article/write-v2/vibe-ai-problem-solving-video-script.md",
+  "title": "Vibe 方法论：如何利用 AI 快速高效解决真实问题",
+  "summary": "这不是一条“十分钟用 AI 做网页”的爽片，而是一场真实项目复盘式技术分享。主题是：如何把 AI 组织成一个能调研、设计、执行、反驳、验收的高吞吐问题解决系统。",
+  "cover": "/Users/apulu/Documents/yy-article/wx-output/cover-ai-vibe-workbench.png",
+  "headings": [
+    {
+      "level": 1,
+      "text": "Vibe 方法论：如何利用 AI 快速高效解决真实问题",
+      "line": 1
+    },
+    {
+      "level": 2,
+      "text": "成片主线",
+      "line": 7
+    },
+    {
+      "level": 2,
+      "text": "开场：AI 时代第一生产资料",
+      "line": 25
+    },
+    {
+      "level": 2,
+      "text": "先讲结论：Vibe 不是随便爽一下",
+      "line": 102
+    },
+    {
+      "level": 2,
+      "text": "第一招：未知领域先要地图，不要直接开干",
+      "line": 166
+    },
+    {
+      "level": 2,
+      "text": "第二招：先做 First Beta，再让 B 模型来骂",
+      "line": 277
+    },
+    {
+      "level": 2,
+      "text": "第三招：主次要分，时刻记住主线",
+      "line": 388
+    },
+    {
+      "level": 2,
+      "text": "第四招：提高吞吐，多线程并行，但先收敛上下文",
+      "line": 484
+    },
+    {
+      "level": 2,
+      "text": "第五招：AI 泔水要过滤，不能无脑吃",
+      "line": 615
+    },
+    {
+      "level": 2,
+      "text": "第六招：长程任务要讲清楚边界，然后别让它闲着",
+      "line": 702
+    },
+    {
+      "level": 2,
+      "text": "第七招：Prompt 不是玄学，是需求表达能力",
+      "line": 803
+    },
+    {
+      "level": 2,
+      "text": "第八招：Vibe 的自由，来自手机和电脑联动",
+      "line": 912
+    },
+    {
+      "level": 2,
+      "text": "第九招：双模型交叉，主力推进加外部审查",
+      "line": 987
+    },
+    {
+      "level": 2,
+      "text": "第十招：Token 要自由，才能倒逼输入",
+      "line": 1069
+    },
+    {
+      "level": 2,
+      "text": "结尾：时间有限，想要有结果，就不停输出",
+      "line": 1156
+    },
+    {
+      "level": 2,
+      "text": "置顶评论可复制 Prompt",
+      "line": 1282
+    },
+    {
+      "level": 2,
+      "text": "拍摄备注",
+      "line": 1309
+    }
+  ],
+  "script_labels": [
+    "口播",
+    "小结字幕",
+    "屏幕字幕",
+    "屏幕素材",
+    "成片验收",
+    "技术演示点",
+    "画面建议",
+    "结尾字幕",
+    "节奏",
+    "语气"
+  ],
+  "image_count": 0,
+  "link_count": 0,
+  "platforms": [
+    "wechat",
+    "zhihu"
+  ]
+}

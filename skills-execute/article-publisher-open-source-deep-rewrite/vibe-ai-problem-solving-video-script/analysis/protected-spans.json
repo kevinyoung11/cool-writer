@@ -1,0 +1,207 @@
+[
+  {
+    "kind": "code_fence",
+    "value": "```text\nAI 不是替你省掉思考，而是让你用更高吞吐完成探索、生成、反驳、执行和验收。\n```",
+    "line": 11
+  },
+  {
+    "kind": "code_fence",
+    "value": "```text\nAI 时代第一生产资料：token 要够\n```",
+    "line": 33
+  },
+  {
+    "kind": "code_fence",
+    "value": "```text\n如何利用 AI 快速高效地解决真实问题。\n```",
+    "line": 63
+  },
+  {
+    "kind": "code_fence",
+    "value": "```text\nAI 的价值不是替你想一次答案。\nAI 的价值是让你用更高吞吐完成：探索、生成、反驳、收敛、执行、验收。\n```",
+    "line": 97
+  },
+  {
+    "kind": "code_fence",
+    "value": "```text\n问一句 -> 回一句 -> 再问一句 -> 又回一句 -> 聊爽了 -> 没落地\n```",
+    "line": 110
+  },
+  {
+    "kind": "code_fence",
+    "value": "```text\n探索 -> First Beta -> 反方评审 -> 辩证升级 -> 并行执行 -> 验收收敛\n```",
+    "line": 116
+  },
+  {
+    "kind": "code_fence",
+    "value": "```text\n先收敛主线，再 fork 支线，最后回到主线验收。\n```",
+    "line": 156
+  },
+  {
+    "kind": "code_fence",
+    "value": "```text\n帮我做一个 AI 视频脚本工具。\n```",
+    "line": 176
+  },
+  {
+    "kind": "code_fence",
+    "value": "```text\n我想做一个从原始视频资料到教学视频脚本的工具。\n我不熟悉这个领域。\n先不要写代码。\n请帮我调研这个问题的普遍方案：\n1. 这个领域通常有哪些模块；\n2. 最小可用版本应该包含什么；\n3. 哪些能力看起来重要但可以后置；\n4. 最大技术风险是什么；\n5. 如果只做 first beta，建议怎么切。\n```",
+    "line": 182
+  },
+  {
+    "kind": "code_fence",
+    "value": "```text\n必须现在做\n可以后置\n不要碰\n最大风险\n验收方式\n```",
+    "line": 262
+  },
+  {
+    "kind": "code_fence",
+    "value": "```text\n未知领域不要先开干，先让 AI 给地图。\n地图的价值不是最终答案，而是帮你避开一开始就选地狱难度。\n```",
+    "line": 272
+  },
+  {
+    "kind": "code_fence",
+    "value": "```text\nA 模型：出方案 / 做 beta\n      ↓\nB 模型：反方 review / 找漏洞\n      ↓\n主线程：吸收有证据的批评，升级方案\n```",
+    "line": 285
+  },
+  {
+    "kind": "code_fence",
+    "value": "```text\n请你站在反方 reviewer 视角审查这个方案。\n不要夸。\n请找出它最可能失败的 5 个原因。\n每个原因都要给证据、风险等级和修正建议。\n请区分：必须现在修、下个版本修、未来再说。\n```",
+    "line": 319
+  },
+  {
+    "kind": "code_fence",
+    "value": "```text\nP0：必须现在处理\nP1：下个版本处理\nP2：未来计划\n误判：证据不足，暂不采纳\n```",
+    "line": 373
+  },
+  {
+    "kind": "code_fence",
+    "value": "```text\n不要只让 AI 生成。\n还要让 AI 反驳。\n方案被反驳后还能站住，才开始变得可靠。\n```",
+    "line": 382
+  },
+  {
+    "kind": "code_fence",
+    "value": "```text\n原始视频 -> 真实处理 -> 证据生成 -> 创作包 -> 可拍脚本\n```",
+    "line": 396
+  },
+  {
+    "kind": "code_fence",
+    "value": "```text\n权限系统 / UI 重构 / 未来架构 / 自动剪片 / 多用户协作 / 指标面板\n```",
+    "line": 402
+  },
+  {
+    "kind": "code_fence",
+    "value": "```text\n请把当前任务拆成：\n1. 主线任务；\n2. 必要支线；\n3. 可后置支线。\n\n如果某个建议不直接服务本次目标，请放入 future backlog，不要现在执行。\n```",
+    "line": 460
+  },
+  {
+    "kind": "code_fence",
+    "value": "```text\nAI 可以帮你扩展能力，但不能让它扩展焦虑。\n每个任务都问一句：它服务主线吗？\n```",
+    "line": 479
+  },
+  {
+    "kind": "code_fence",
+    "value": "```text\n主线程上下文包\n├── 方案讨论\n├── C 端页面执行\n├── 后台链路执行\n├── bug 定位\n├── code review\n├── 自动开发\n├── 临时任务\n└── 未来架构讨论\n```",
+    "line": 493
+  },
+  {
+    "kind": "code_fence",
+    "value": "```text\n这是当前主线目标、最近改动、错误日志和已验证事实。\n请只定位这个 bug。\n不要重构无关模块。\n输出根因、证据、最小修复建议和验证方式。\n```",
+    "line": 565
+  },
+  {
+    "kind": "code_fence",
+    "value": "```text\n这是当前 beta 已完成范围。\n请从未来 3 个月演进角度评估架构风险。\n不要建议现在重写。\n请区分：必须现在改、下个版本改、未来再说。\n```",
+    "line": 574
+  },
+  {
+    "kind": "code_fence",
+    "value": "```text\n目标：\n当前状态：\n已验证事实：\n未验证假设：\n不要动的范围：\n本线程任务：\n输出格式：\n验收标准：\n```",
+    "line": 597
+  },
+  {
+    "kind": "code_fence",
+    "value": "```text\n主线不清楚，并行会加速混乱。\n主线清楚，并行才会提高吞吐。\n```",
+    "line": 610
+  },
+  {
+    "kind": "code_fence",
+    "value": "```text\n主线 / 证据 / 阶段 / 风险 / 验收\n```",
+    "line": 623
+  },
+  {
+    "kind": "code_fence",
+    "value": "```text\n信任 AI，不等于放弃判断。\n看输出先过五关：主线、证据、阶段、风险、验收。\n```",
+    "line": 697
+  },
+  {
+    "kind": "code_fence",
+    "value": "```text\n目标\n任务明细\n边界情况\n验收标准\n连续执行\n完成后报告\n```",
+    "line": 710
+  },
+  {
+    "kind": "code_fence",
+    "value": "```text\n计划已经确认。\n在不违反边界的前提下，请连续执行到验收完成。\n中途不要因为常规下一步来问我。\n只有遇到权限风险、数据风险、不可逆操作或计划外范围时再停下来。\n完成后给我结果、验证证据和剩余风险。\n```",
+    "line": 747
+  },
+  {
+    "kind": "code_fence",
+    "value": "```text\n规划没清楚，要讨论。\n规划已确认，要连续执行到验收。\n人类做关键判断，AI 负责高吞吐推进。\n```",
+    "line": 797
+  },
+  {
+    "kind": "code_fence",
+    "value": "```text\n背景资料\n个人总结\n目标主题\n开头钩子\n具体方法论\n表达风格\n输出位置\n验收要求\n```",
+    "line": 811
+  },
+  {
+    "kind": "code_fence",
+    "value": "```text\nPrompt 的本质不是咒语，而是需求表达。\n描述得越清楚，AI 越像协作者。\n描述得越模糊，AI 越像算命的，而且是很会排版的算命先生。\n```",
+    "line": 906
+  },
+  {
+    "kind": "code_fence",
+    "value": "```text\n手机捕捉想法 -> AI 整理成需求 -> 电脑执行验证 -> 结果回到项目\n```",
+    "line": 922
+  },
+  {
+    "kind": "code_fence",
+    "value": "```text\n想到就立刻推进一步。\n不完美的输入，也比完美地悬置强。\n```",
+    "line": 982
+  },
+  {
+    "kind": "code_fence",
+    "value": "```text\nCodex：给出方案和代码实现\nClaude：反方 review，指出风险\nCodex：按证据修复\nClaude：完成度 review\nCodex：最终验收和整理文档\n```",
+    "line": 1054
+  },
+  {
+    "kind": "code_fence",
+    "value": "```text\n不要问哪个模型天下第一。\n问：这一步谁最适合？\n```",
+    "line": 1064
+  },
+  {
+    "kind": "code_fence",
+    "value": "```text\n省 token：\n帮我优化一下。\n\n充分输入：\n背景、目标、受众、约束、失败经验、样例、验收标准。\n```",
+    "line": 1077
+  },
+  {
+    "kind": "code_fence",
+    "value": "```text\n充分输入，减少返工。\n```",
+    "line": 1117
+  },
+  {
+    "kind": "code_fence",
+    "value": "```text\nToken 自由不是浪费。\n它是在用充分上下文，换更少返工。\n```",
+    "line": 1151
+  },
+  {
+    "kind": "code_fence",
+    "value": "```text\n念头 -> prompt -> 地图 -> first beta -> review -> bug 修复 -> 验收 -> 文档 -> 视频脚本\n```",
+    "line": 1164
+  },
+  {
+    "kind": "code_fence",
+    "value": "```text\nAI 不会自动替你完成梦想。\n但它能让你更快地把想法推进到现实。\n前提是：你要会组织它。\n```",
+    "line": 1276
+  },
+  {
+    "kind": "code_fence",
+    "value": "```text\n你是我的 AI 问题解决协作者。\n\n请先不要急着执行。\n我会给你一个问题或目标，你先帮我完成 6 件事：\n\n1. 复述你对目标的理解；\n2. 判断这是未知领域探索、方案设计、紧急问题、思路整理，还是执行任务；\n3. 给出当前最小主线；\n4. 区分主线任务、必要支线、可后置支线；\n5. 输出 first beta 方案；\n6. 说明如何验收，以及是否需要另一个模型做反方 review。\n\n如果我确认计划，再进入执行。\n执行时请保持主线，不要扩大范围。\n如果任务边界已确认，请连续执行到验收完成；\n只有遇到权限风险、数据风险、不可逆操作或计划外范围时再停下来问我。\n\n完成后请给我：\n1. 做了什么；\n2. 验证证据；\n3. 仍然存在的风险；\n4. 下一步最小建议。\n```",
+    "line": 1284
+  }
+]

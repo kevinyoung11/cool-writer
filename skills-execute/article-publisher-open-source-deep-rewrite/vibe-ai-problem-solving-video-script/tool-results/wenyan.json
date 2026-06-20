@@ -1,0 +1,15 @@
+{
+  "name": "wenyan",
+  "project_path": "/Users/apulu/Documents/yy-article/docs/projects/wenyan",
+  "command": [
+    "inspect",
+    "package.json"
+  ],
+  "status": "unavailable",
+  "used_real_project": true,
+  "output_files": [],
+  "stdout_tail": "",
+  "stderr_tail": "",
+  "fallback_used": false,
+  "detail": "Read local package metadata; no stable local CLI script found."
+}

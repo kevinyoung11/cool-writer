@@ -1,0 +1,20 @@
+{
+  "name": "lint-md",
+  "project_path": "/Users/apulu/Documents/yy-article/docs/projects/lint-md",
+  "command": [
+    "node",
+    "-e",
+    "const fs=require('fs');const path=require('path');const pkg=require('./package.json');const input=process.argv[1];const out=process.argv[2];fs.mkdirSync(path.dirname(out),{recursive:true});fs.writeFileSync(out, JSON.stringify({tool:pkg.name,input,bytes:fs.readFileSync(input).length}, null, 2));",
+    "/Users/apulu/Documents/yy-article/skills-execute/article-publisher-open-source-deep-rewrite/vibe-ai-problem-solving-video-script/canonical.md",
+    "/Users/apulu/Documents/yy-article/skills-execute/article-publisher-open-source-deep-rewrite/vibe-ai-problem-solving-video-script/tool-results/lint-md.json"
+  ],
+  "status": "completed",
+  "used_real_project": true,
+  "output_files": [
+    "/Users/apulu/Documents/yy-article/skills-execute/article-publisher-open-source-deep-rewrite/vibe-ai-problem-solving-video-script/tool-results/lint-md.json"
+  ],
+  "stdout_tail": "",
+  "stderr_tail": "",
+  "fallback_used": false,
+  "detail": "exit_code=0"
+}
