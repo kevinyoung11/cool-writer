@@ -1,0 +1,12 @@
+{
+  "name": "article-publisher-tools",
+  "private": true,
+  "description": "Pinned open-source CLIs used by the article-publisher skill adapters. Installed locally so adapter behavior is reproducible.",
+  "dependencies": {
+    "@lint-md/cli": "^2",
+    "zhlint": "^0",
+    "textlint": "^14",
+    "textlint-rule-preset-zh-technical-writing": "^0",
+    "@wenyan-md/cli": "^2"
+  }
+}

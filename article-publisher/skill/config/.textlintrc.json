@@ -1,0 +1,10 @@
+{
+  "rules": {
+    "preset-zh-technical-writing": {
+      "no-mix-caps-of-half-and-full-width-bracket": true,
+      "max-comma": false,
+      "max-ten": false,
+      "sentence-length": false
+    }
+  }
+}

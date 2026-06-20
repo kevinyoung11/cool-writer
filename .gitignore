@@ -62,3 +62,9 @@ skills-execute/**/logs/
 
 # Embedded upstream project snapshots
 docs/projects/
+
+# article-publisher skill: local OSS toolbox deps + run outputs.
+# package.json + package-lock.json ARE tracked (pin OSS tool versions); only
+# the installed node_modules and per-article run outputs are ignored.
+article-publisher/skill/tools/node_modules/
+article-publisher/runs/

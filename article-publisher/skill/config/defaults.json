@@ -1,0 +1,18 @@
+{
+  "project_root": "/Users/apulu/Documents/yy-article",
+  "skill_root": "/Users/apulu/Documents/yy-article/article-publisher/skill",
+  "toolbox": "/Users/apulu/Documents/yy-article/article-publisher/skill/tools",
+  "output_root": "/Users/apulu/Documents/yy-article/article-publisher/runs",
+  "platforms": ["wechat", "zhihu"],
+  "wenyan": {
+    "wechat_theme": "lapis",
+    "zhihu_theme": "default",
+    "highlight": "solarized-light"
+  },
+  "tools": {
+    "lint-md":  { "kind": "lint", "bin": "lint-md" },
+    "zhlint":   { "kind": "lint", "bin": "zhlint" },
+    "textlint": { "kind": "lint", "bin": "textlint", "config": "config/.textlintrc.json" },
+    "wenyan":   { "kind": "format", "bin": "wenyan" }
+  }
+}
