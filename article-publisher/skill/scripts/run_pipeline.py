@@ -33,6 +33,8 @@ sys.path.insert(0, str(HERE))
 
 import adapters  # noqa: E402
 import fidelity  # noqa: E402
+import media  # noqa: E402
+import figuregen  # noqa: E402
 
 
 def load_config() -> dict:
@@ -97,7 +99,8 @@ def format_file(cfg: dict, md_path: Path, out_dir: Path, platform: str
 
 def write_checklist(out_dir: Path, slug: str, platforms: list[str],
                     tool_results: dict, fidelity_results: dict,
-                    health: dict) -> Path:
+                    health: dict, media_results: dict | None = None,
+                    figure_gen: dict | None = None) -> Path:
     degraded = []
     for scope, results in tool_results.items():
         for r in results:
@@ -122,6 +125,35 @@ def write_checklist(out_dir: Path, slug: str, platforms: list[str],
         for m in r["missing"][:10]:
             lines.append(f"    - 缺失[{m['category']}]：`{m['span']}`")
     lines.append("")
+    if media_results:
+        lines.append("## 配图覆盖（图文平台）")
+        for plat, mr in media_results.items():
+            r = mr["result"]
+            mark = "✅" if r["passed"] else "⚠️"
+            lines.append(
+                f"- {mark} **{plat}**：视觉元素 {r['visual_total']}"
+                f"（图 {r['inline_images']} + 结构图 {r['structure_diagrams']}）"
+                f"，建议至少 {r['recommended_min_figures']}；"
+                f"media-plan 规划 {r['planned_in_media_plan']} 张")
+            if r["missing_prompts"]:
+                lines.append(f"    - 缺 prompt：{', '.join(r['missing_prompts'])}")
+            if not r["passed"]:
+                lines.append("    - [ ] 配图不足，需补图或在 media-plan 中规划生成")
+        lines.append("")
+    if figure_gen is not None:
+        gen, dfr, fail = (figure_gen["generated"], figure_gen["deferred"],
+                          figure_gen["failed"])
+        lines.append("## 真实配图生成")
+        lines.append(f"- ✅ 已渲染 {len(gen)} 张结构图 PNG（Chrome headless，"
+                     f"见 `assets/`）：{', '.join(a['name'] for a in gen) or '无'}")
+        if dfr:
+            lines.append(f"- ⚠️ {len(dfr)} 张创意图需人工/文生图生成（无文生图后端）：")
+            for a in dfr:
+                lines.append(f"    - [ ] `{a['name']}` → {a.get('output')}；"
+                             f"prompt：{(a.get('prompt') or '')[:60]}…")
+        if fail:
+            lines.append(f"- ❌ {len(fail)} 张生成失败，需复核")
+        lines.append("")
     lines.append("## 平台合规（人工确认）")
     if "wechat" in platforms:
         lines += [
@@ -153,6 +185,7 @@ def main() -> int:
     ap.add_argument("--wechat", help="path to LLM-rewritten wechat.md")
     ap.add_argument("--zhihu", help="path to LLM-rewritten zhihu.md")
     ap.add_argument("--terms", help="protected-spans terms json (optional)")
+    ap.add_argument("--media-plan", help="analysis/media-plan.json (optional)")
     args = ap.parse_args()
 
     cfg = load_config()
@@ -185,6 +218,15 @@ def main() -> int:
 
     tool_results: dict[str, list[dict]] = {}
     fidelity_results: dict[str, dict] = {}
+    media_results: dict[str, dict] = {}
+    figure_gen: dict | None = None
+
+    # generate real figures from the media plan (before media coverage analysis,
+    # so rendered PNGs are present in assets/ and referenced by the drafts).
+    if args.media_plan and Path(args.media_plan).exists():
+        figure_gen = figuregen.run(
+            args.media_plan, str(out_dir),
+            str(out_dir / "media-generation.json"))
 
     # lint canonical always
     canon_lint = lint_file(cfg, canon_path, tool_dir)
@@ -216,14 +258,26 @@ def main() -> int:
         fid = fidelity.run(str(canon_path), str(dst), args.terms,
                            str(out_dir / f"fidelity-{plat}.json"))
         fidelity_results[plat] = fid
+        # media coverage (figures / structure diagrams vs v1 sizing rule)
+        med = media.run(str(dst), args.media_plan,
+                        str(out_dir / f"media-{plat}.json"))
+        media_results[plat] = med
 
     report["tools"] = tool_results
     report["fidelity"] = {k: v["result"] for k, v in fidelity_results.items()}
+    report["media"] = {k: v["result"] for k, v in media_results.items()}
+    if figure_gen is not None:
+        report["figure_generation"] = {
+            "generated": len(figure_gen["generated"]),
+            "deferred": len(figure_gen["deferred"]),
+            "failed": len(figure_gen["failed"]),
+        }
     (out_dir / "report.json").write_text(
         json.dumps(report, ensure_ascii=False, indent=2), encoding="utf-8")
 
     write_checklist(out_dir, args.slug, cfg["platforms"],
-                    tool_results, fidelity_results, health)
+                    tool_results, fidelity_results, health, media_results,
+                    figure_gen)
 
     # console summary
     used_real = sum(1 for rs in tool_results.values() for r in rs
@@ -234,6 +288,14 @@ def main() -> int:
         r = fr["result"]
         print(f"     fidelity[{plat}]: {r['preserved']}/{r['total_protected_spans']}"
               f" passed={r['passed']}")
+    for plat, mr in media_results.items():
+        r = mr["result"]
+        print(f"     media[{plat}]: visuals {r['visual_total']} "
+              f"(min {r['recommended_min_figures']}) passed={r['passed']}")
+    if figure_gen is not None:
+        print(f"     figures: generated {len(figure_gen['generated'])}, "
+              f"deferred {len(figure_gen['deferred'])}, "
+              f"failed {len(figure_gen['failed'])}")
     return 0
 
 

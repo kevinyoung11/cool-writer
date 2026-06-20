@@ -58,17 +58,27 @@ All four (`lint-md`, `zhlint`, `textlint`, `wenyan`) should report `available: t
   code block, link, project name. (The pipeline will verify this.)
 - Write `wechat.md` and `zhihu.md` (body only; no video production notes).
 
+### 2.5 Media planning (LLM) — 公众号/知乎 是图文平台
+- 源脚本里的「画面建议/流程图/对比图/分工表」不能直接丢。两种归宿：
+  - **结构图保留**：流程/对比/分工表用代码块（```text）、表格或 mermaid 留在正文，
+    它们计入视觉元素（fidelity 会把 ```text 视为散文不强校验，所以可自由保留/改写）。
+  - **真配图规划**：封面 + 总览图 + 每个重点方法论的解释图，写进
+    `analysis/media-plan.json`：`{"assets": {"<name>": {"type","executor","output","placement","prompt"}}}`。
+- 配图数量按 v1 规则：总览图 1 + 每 ~1500 字 1 张 + 方法论文 ≥3。
+- 本 skill **不生成图片**；media-plan 产出可交给画图工具/人工的 prompt。
+
 ### 3. Run the deterministic pipeline
 ```bash
 python3 /Users/apulu/Documents/yy-article/article-publisher/skill/scripts/run_pipeline.py \
   --source <SOURCE.md> --slug <slug> \
   --wechat <wechat.md> --zhihu <zhihu.md> \
   --terms <analysis/protected-terms.json> \
+  --media-plan <analysis/media-plan.json> \
   --stage all
 ```
 This produces, under `runs/<slug>/`: `canonical.md`, `wechat.md`/`zhihu.md`,
 `wechat.html`/`zhihu.html` (wenyan inline-styled), `tool-results/`,
-`fidelity-*.json`, `report.json`, `publish-checklist.md`.
+`fidelity-*.json`, `media-*.json`, `report.json`, `publish-checklist.md`.
 
 ### 4. Review the report (LLM + human)
 - Open `publish-checklist.md`.
@@ -78,6 +88,8 @@ This produces, under `runs/<slug>/`: `canonical.md`, `wechat.md`/`zhihu.md`,
 - **Degradation**: if any tool is `unavailable/failed`, the HTML/lint for that
   step is degraded — fix the tool (see setup) or flag for manual formatting.
 - **Lint**: skim `tool-results/` for 中英文空格、全角标点、技术写作问题; apply fixes.
+- **Media**: if 配图覆盖 shows ⚠️, the article is under-illustrated — retain more
+  structure diagrams or add assets to `media-plan.json` and rerun.
 
 ### 5. Hand off
 - 公众号: paste `wechat.html` into the MP editor (inline styles survive paste).
